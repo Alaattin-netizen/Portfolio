@@ -1,0 +1,23 @@
+title: 'Designing Interfaces, Building Experiences.'
+description: "I've worked on a variety of projects, focusing on creating intuitive digital experiences where thoughtful design meets clean code. Here are some highlights I'm proud of, showcasing my process from concept to execution."
+
+redirectButtons:
+  - link: 'mailto:your.email@example.com'
+    text: Email me
+    color: primary
+
+list:
+  - year: '2026'
+    title: University Information Project
+    description: A project that aims to develop a Web API that allows students to register for courses, track their grades, communicate with their academic advisors, and manage their transcripts.
+    url: 'https://github.com/Alaattin-netizen/-University-Information-System-API'
+
+  - year: '2026'
+    title: Movie Review App
+    description: A web app to review movies using tmbd api
+    url: 'https://github.com/Alaattin-netizen/Movie-Review-app'
+
+  - year: '2026'
+    title: Improved To-Do List App
+    description: A to-do list app that allows users to create, edit, and delete tasks, as well as set reminders and prioritize tasks.
+    url: https://github.com/Alaattin-netizen/Improved_TodoList

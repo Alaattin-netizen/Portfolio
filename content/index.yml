@@ -1,0 +1,47 @@
+# content/index.yml
+
+title: Hey, I'm Alaattin Yılmaz Computer Engineering Student
+avatar: /profile_picture.png
+introduction: I am a Dokuz Eylül University Computer Engineering student with a strong interest in software development and technology.
+communication:
+  - link: 'https://github.com/Alaattin-netizen'
+    icon: i-simple-icons-github
+  - link: 'https://www.linkedin.com/in/alaattin-yılmaz-723b67335'
+    icon: i-simple-icons-linkedin
+  - link: 'mailto:yilmazalaattin302@gmail.com'
+    icon: i-lucide-mail
+
+aboutMe: I'm a computer engineering student with a passion for software development and technology. I enjoy learning new programming languages and frameworks, and I am always looking for opportunities to apply my skills in real-world projects. My goal is to become a proficient software engineer and contribute to innovative solutions in the tech industry.
+
+workExperience:
+  title: Work Experience
+  list:
+    - company: Devlet Su İşleri Genel Müdürlüğü
+      position: Summer Intern
+      startDate: 2025-08
+      endDate: 2025-09
+      website: 'https://www.dsi.gov.tr/'
+      logo: /DSI-logo.png
+      color: '#1c9611'
+    - company: trex Digital Manufacturing
+      position: Summer Intern
+      startDate: 2026-08
+      endDate: 2026-09
+      website: 'https://www.trex.com.tr/'
+      logo: /trex-logo.png
+      color: '#b3e8ae'
+Someprojects:
+  title: Personal Projects
+  list:
+    - title: University Information Project
+      description: A project that aims to develop a Web API that allows students to register for courses, track their grades, communicate with their academic advisors, and manage their transcripts.
+      year: '2026'
+      url: 'https://github.com/Alaattin-netizen/-University-Information-System-API'
+    - title: Movie Review App
+      description: A web app to review movies using tmbd api
+      year: '2026'
+      url: 'https://github.com/Alaattin-netizen/Movie-Review-app'
+    - title: Improved To-Do List App
+      description: A to-do list app that allows users to create, edit, and delete tasks, as well as set reminders and prioritize tasks.
+      year: '2026'
+      url: https://github.com/Alaattin-netizen/Improved_TodoList
