@@ -1,31 +1,34 @@
 <script setup lang="ts">
-const { data: projects } = await useAsyncData('projects', async () => {
-  const result = await queryCollection('projects').first()
-  return result
+const { data: meta } = await useAsyncData('projects-meta', async () => {
+  return queryCollection('projectsMeta').first()
 })
 
-if (!projects.value) {
+const { data: projects } = await useAsyncData('projects-list', async () => {
+  return queryCollection('projects').all()
+})
+
+if (!meta.value || !projects.value) {
   throw createError({ statusCode: 404, statusMessage: 'Projects not found', fatal: true })
 }
 </script>
 
 <template>
-  <UPage v-if="projects">
+  <UPage v-if="meta && projects">
     <UPageHero>
       <template #title>
-        <h1 class="tracking-tight font-bold text-highlighted mx-0 max-w-xl text-pretty text-3xl sm:text-4xl lg:text-5xl text-left">
-          {{ projects.title }}
+        <h1 class="tracking-tight font-bold text-highlighted ...">
+          {{ meta.title }}
         </h1>
       </template>
       <template #description>
-        <div class="text-md  max-w-2xl sm:text-md text-muted text-balance mt-6 mx-0 text-left">
-          {{ projects.description }}
+        <div class="...">
+          {{ meta.description }}
         </div>
       </template>
       <template #links>
-        <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start">
+        <div class="flex flex-wrap ...">
           <UButton
-            v-for="(btn, idx) in projects.redirectButtons"
+            v-for="(btn, idx) in meta.redirectButtons"
             :key="idx"
             :to="btn.link"
             target="_blank"
@@ -41,7 +44,7 @@ if (!projects.value) {
     <UPageSection>
       <div class="flex flex-col gap-2">
         <ProjectCard
-          v-for="(project, idx) in projects.list"
+          v-for="(project, idx) in projects"
           :key="idx"
           :project="project"
         />

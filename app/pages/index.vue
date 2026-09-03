@@ -3,6 +3,14 @@ const { data: profile } = await useAsyncData('profile-data', async () => {
   const result = await queryCollection('index').first()
   return result
 })
+
+const { data: projects } = await useAsyncData('home-projects', async () => {
+  return queryCollection('projects').all()
+})
+
+const { data: workExperiences } = await useAsyncData('work-data', async () => {
+  return queryCollection('work').all()
+})
 </script>
 
 <template>
@@ -13,7 +21,7 @@ const { data: profile } = await useAsyncData('profile-data', async () => {
           <UAvatar
             :src="profile.avatar"
             :alt="profile.title"
-            size="2xl"
+            class="w-20 h-20 rounded-full object-cover"
           />
           <span class="text-5xl sm:text-7xl tracking-tight font-bold text-highlighted text-center">
             {{ profile.title }}
@@ -37,36 +45,34 @@ const { data: profile } = await useAsyncData('profile-data', async () => {
       </template>
     </UPageHero>
 
-    <UPageSection>
+    <UPageSection :ui="{ container: 'section-custom-padding' }">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h2 class="text-2xl font-bold mb-4">
             About Me
           </h2>
-          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p class="leading-relaxed text-muted">
             {{ profile.aboutMe }}
           </p>
         </div>
 
-        <div>
+        <div class="space-y-6">
           <h2 class="text-2xl font-bold mb-4">
-            {{ profile.workExperience.title }}
+            Work Experience
           </h2>
-          <div class="space-y-6">
-            <WorkExperience
-              v-for="(job, idx) in profile.workExperience.list"
-              :key="idx"
-              :job="job"
-            />
-          </div>
+          <WorkExperience
+            v-for="(job, idx) in workExperiences"
+            :key="idx"
+            :job="job"
+          />
         </div>
       </div>
     </UPageSection>
 
-    <UPageSection :title="profile.Someprojects.title">
+    <UPageSection title="Personal Projects">
       <div class="flex flex-col gap-2">
         <ProjectCard
-          v-for="(project, idx) in profile.Someprojects.list"
+          v-for="(project, idx) in projects"
           :key="idx"
           :project="project"
         />

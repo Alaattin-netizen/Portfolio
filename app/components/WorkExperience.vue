@@ -13,37 +13,42 @@ defineProps<{
 </script>
 
 <template>
-  <UCard :ui="{ body: 'p-4' }" class="flex items-start gap-4">
-    <div v-if="job.logo" class="shrink-0 w-12 h-12">
-      <img :src="job.logo" :alt="job.company" class="w-full h-full object-contain">
+  <UPageCard
+    variant="naked"
+    class="p-0!"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-2 md:gap-4 w-full">
+      <span class="text-sm text-muted">{{ job.startDate }} – {{ job.endDate || 'Present' }}</span>
+
+      <hr class="border-t border-muted w-full">
+
+      <div class="flex flex-wrap items-center gap-1.5 text-sm text-muted md:justify-self-end">
+        <span>{{ job.position }}</span>
+        <span>at</span>
+        <img
+          v-if="job.logo"
+          :src="job.logo"
+          :alt="job.company"
+          class="w-4 h-4 object-contain"
+        >
+        <a
+          v-if="job.website"
+          :href="job.website"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium hover:underline"
+          :style="{ color: job.color || 'var(--color-primary-500)' }"
+        >
+          {{ job.company }}
+        </a>
+        <span
+          v-else
+          class="font-medium"
+          :style="{ color: job.color || 'var(--color-primary-500)' }"
+        >
+          {{ job.company }}
+        </span>
+      </div>
     </div>
-
-    <div class="flex-1">
-      <UButton
-        v-if="job.website"
-        :to="job.website"
-        target="_blank"
-        variant="link"
-        :style="{ color: job.color }"
-        class="text-xl font-semibold p-0 h-auto hover:underline"
-      >
-        {{ job.company }}
-      </UButton>
-      <span
-        v-else
-        :style="{ color: job.color }"
-        class="text-xl font-semibold"
-      >
-        {{ job.company }}
-      </span>
-
-      <p>
-        {{ job.position }}
-      </p>
-
-      <p>
-        {{ job.startDate }} – {{ job.endDate || 'Present' }}
-      </p>
-    </div>
-  </UCard>
+  </UPageCard>
 </template>

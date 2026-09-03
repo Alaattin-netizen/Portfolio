@@ -26,11 +26,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UApp>
     <UContainer max-width="xl" padding>
-      <div class=" px-20 md:px-40">
+      <div class="border border-muted">
         <UHeader>
           <UNavigationMenu :items="items" />
           <UColorModeButton />
-
           <template #body>
             <UNavigationMenu orientation="vertical" :items="items" />
           </template>
@@ -39,6 +38,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         <UMain>
           <NuxtPage />
         </UMain>
+
         <UFooter>
           <template #right>
             <p class="text-sm text-muted">
@@ -47,6 +47,6 @@ const items = computed<NavigationMenuItem[]>(() => [
           </template>
         </UFooter>
       </div>
-    </UContainer>x
+    </UContainer>
   </UApp>
 </template>
