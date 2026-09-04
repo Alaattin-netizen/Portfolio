@@ -4,7 +4,7 @@ description: Learn more about my journey as a computer engineering student, my d
 picture: /profile_picture.png
 ---
 
-Hi, I'm Alaattin Yılmaz, a Computer Engineering student at Dokuz Eylül University. For the past few years, I've been immersed in the world of software development, focusing on building experiences that are not just functional, but genuinely intuitive and engaging.
+Hi, I'm Alaattin Yılmaz, a Computer Engineering student at Dokuz Eylül University. For the past few years, I've been immersed in the world of software development, focusing on building experiences that are not just functional, but genuinely intuitive and engaging. 
 
 My path started with a curiosity for technology and problem-solving. I've honed my skills in both back-end and front-end development, believing that the best digital products are born from a deep understanding of both aesthetics and implementation.
 
@@ -23,3 +23,5 @@ What keeps me excited about this work is the constant learning and the challenge
 When I'm not coding, you might find me exploring new tech, contributing to open-source projects, or enjoying a good coffee.
 
 Thanks for stopping by. Feel free to browse my [projects](/projects) or [get in touch](mailto\:yilmazalaattin302@gmail.com) if you'd like to collaborate!
+
+this is for testing purposes
