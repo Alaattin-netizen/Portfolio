@@ -17,20 +17,20 @@ defineProps<{
     variant="naked"
     class="p-0!"
   >
-    <div class="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-2 md:gap-4 w-full">
+    <div class="relative grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-2 md:gap-4 w-full">
       <span class="text-sm text-muted">{{ job.startDate }} – {{ job.endDate || 'Present' }}</span>
-
+      <img
+        v-if="job.logo"
+        :src="job.logo"
+        :alt="job.company"
+        class="absolute right-0 -bottom-8 -z-99 opacity-20 w-24 h-24 object-contain"
+      >
       <hr class="border-t border-muted w-full">
 
       <div class="flex flex-wrap items-center gap-1.5 text-sm text-muted md:justify-self-end">
         <span>{{ job.position }}</span>
         <span>at</span>
-        <img
-          v-if="job.logo"
-          :src="job.logo"
-          :alt="job.company"
-          class="w-4 h-4 object-contain"
-        >
+
         <a
           v-if="job.website"
           :href="job.website"

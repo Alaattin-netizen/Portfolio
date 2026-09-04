@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
@@ -13,6 +14,13 @@ export default defineNuxtConfig({
       owner: 'Alaattin-netizen',
       repo: 'Portfolio',
       branch: 'main',
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      studioAuthGithubClientId: process.env.STUDIO_AUTH_GITHUB_CLIENT_ID,
+      studioAuthGithubClientSecret: process.env.STUDIO_AUTH_GITHUB_CLIENT_SECRET,
     },
   },
 })
