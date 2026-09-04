@@ -21,7 +21,7 @@ const { data: workExperiences } = await useAsyncData('work-data', async () => {
           <UAvatar
             :src="profile.avatar"
             :alt="profile.title"
-            class="w-20 h-20 rounded-full object-cover"
+            class="w-20 h-20  rounded-full object-cover"
           />
           <span class="text-5xl sm:text-7xl tracking-tight font-bold text-highlighted text-center">
             {{ profile.title }}

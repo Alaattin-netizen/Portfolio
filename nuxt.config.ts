@@ -5,5 +5,14 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/ui', 'nuxt-studio'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
+  studio: {
+    route: '/_studio',
 
+    repository: {
+      provider: 'github',
+      owner: 'Alaattin-netizen',
+      repo: 'Portfolio',
+      branch: 'main',
+    },
+  },
 })

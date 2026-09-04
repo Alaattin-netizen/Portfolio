@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 :root {
-  --ui-container: var(--container-7xl);
+  --ui-container: var(--container-4xl);
 }
 
 .section-custom-padding {

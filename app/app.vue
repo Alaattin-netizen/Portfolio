@@ -26,10 +26,14 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UApp>
     <UContainer max-width="xl" padding>
-      <div class="border border-muted">
+      <div class="border border-default">
         <UHeader>
           <UNavigationMenu :items="items" />
-          <UColorModeButton />
+
+          <template #right>
+            <UColorModeButton />
+          </template>
+
           <template #body>
             <UNavigationMenu orientation="vertical" :items="items" />
           </template>
