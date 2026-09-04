@@ -19,8 +19,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      studioAuthGithubClientId: process.env.STUDIO_AUTH_GITHUB_CLIENT_ID,
-      studioAuthGithubClientSecret: process.env.STUDIO_AUTH_GITHUB_CLIENT_SECRET,
+      studioAuthGithubClientId: process.env.NUXT_STUDIO_AUTH_GITHUB_CLIENT_ID,
+      studioAuthGithubClientSecret: process.env.NUXT_STUDIO_AUTH_GITHUB_CLIENT_SECRET,
     },
   },
 })
